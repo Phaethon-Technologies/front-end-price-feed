@@ -24,10 +24,10 @@ async function main() {
   // Wait for the contract to be deployed
   await priceTracker.deployed();
 
-  const daiprice = await priceTracker.getLatestDaiPrice();
+  const daiprice = await priceTracker.getLatestDaiPrice("0x14866185B1962B63C3Ea9E03Bc1da838bab34C19");
 
 
-  const usdcprice = await priceTracker.getLatestUsdcPrice();
+  const usdcprice = await priceTracker.getLatestUsdcPrice("0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E");
 
 
   

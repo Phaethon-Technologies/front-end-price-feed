@@ -1,4 +1,4 @@
-import priceabi from "./AggregatorV3Interface.json"
+import priceabi from "./PriceTracker.json"
 
-export const MarketAddress = '0xB83C9d1DCb61c2F2A460D81779a27A85A3f67326';
+export const MarketAddress = '0x43059EF59416AB750a4E3140C18AbBd4cCaAFf7f';
 export const MarketAddressABI = priceabi.abi;

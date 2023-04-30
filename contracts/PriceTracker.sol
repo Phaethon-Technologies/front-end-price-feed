@@ -8,13 +8,18 @@ contract PriceTracker {
 
     constructor(address _priceConsumer) {
         priceConsumer = PriceConsumerV3(_priceConsumer);
+    
     }
 
-    function getLatestDaiPrice() external view returns (int) {
-        return priceConsumer.getLatestPricedai();
+    function getLatestDaiPrice(address daiAggregator) external view returns (int) {
+       require(daiAggregator != address(0),"Invalid addresss"); 
+       return priceConsumer.getLatestPrice(daiAggregator);
     }
 
-     function getLatestUsdcPrice() external view returns (int) {
-        return priceConsumer.getLatestPriceusdc();
+    function getLatestUsdcPrice(address usdcAggregator) external view returns (int) {
+    require(usdcAggregator != address(0),"Invalid addresss");
+    return priceConsumer.getLatestPrice(usdcAggregator);
     }
+
+
 }
